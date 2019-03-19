@@ -46,7 +46,7 @@ jump() {
 }
 ```
 ## Week 2
-For week 2 i mainly spent my time working on the smaller thing such as the player artwork and a timer system![player sprite](https://github.com/JAX3/Runner-game-Iteration1/blob/master/player.png) 
+For week 2 i mainly spent my time working on the smaller thing such as the player artwork and a timer system ![player sprite](https://github.com/JAX3/Runner-game-Iteration1/blob/master/player.png) 
 ```js
 var text;
 var timedEvent;
@@ -59,4 +59,4 @@ var timedEvent;
     console.log('Event.progress: ' + (timedEvent.repeatCount));
 }
 ```
-this was my basic way of timing the game  however the phaser 3 ``timedEvent`` function has a property called ``elapsed`` which printsout the number of seconds that has passed.
+this was my basic way of timing the game  however the phaser 3 ``timedEvent`` function has a property called ``elapsed`` which prints out the number of seconds that has passed. However it wouldn't allow me to access that property and would print out ``nan``  or ``undefined`` so for [Interation 2](https://github.com/JAX3/interation2)  I will create a better and easier to follow timing system.
