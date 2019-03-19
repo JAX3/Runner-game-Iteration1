@@ -71,7 +71,7 @@ I got a decent amount of feedback from the people testing.
 * countdown timer at the start
 * music.
 * updated artstyle.
-* 
+* add differant obsticles
 
 
 ### Test data
