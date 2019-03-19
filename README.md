@@ -61,9 +61,21 @@ var timedEvent;
 ```
 this was my basic way of timing the game  however the phaser 3 ``timedEvent`` function has a property called ``elapsed`` which prints out the number of seconds that has passed. However it wouldn't allow me to access that property and would print out ``nan``  or ``undefined`` so for [Interation 2](https://github.com/JAX3/interation2)  I will create a better and easier to follow timing system.
 
+## feedBack
+I got a decent amount of feedback from the people testing.
+* Differant elevation of the platforms.
+* making the player speed up as the game goes on.
+* Update the platform collision.
+* Tutourial styled intro.
+* easier controls.
+* countdown timer at the start
+* music.
+* updated artstyle.
+* 
 
-## Test data
-Tester | Time(seconds)
+
+### Test data
+Tester | Time(seconds)                        
 ------------ | -------------
 camron Brown| 10,50,30
 cam curwan | 10,10,20
