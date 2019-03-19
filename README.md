@@ -70,6 +70,6 @@ cam curwan | 10,10,20
 Dan Fowke | 40,20,20
 Sam russel | 30,20,20
 harry appleby|  30,30,40
-olly| 20,20,30
+oliver Jones| 20,20,30
 
 
