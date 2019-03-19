@@ -46,4 +46,4 @@ jump() {
 }
 ```
 ## Week 2
-For week 2 i mainly spent my time working on the smaller thing such as the player artwork and a timer system
+For week 2 i mainly spent my time working on the smaller thing such as the player artwork and a timer system![player sprite](https://github.com/JAX3/Runner-game-Iteration1/blob/master/player.png)
