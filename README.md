@@ -46,4 +46,17 @@ jump() {
 }
 ```
 ## Week 2
-For week 2 i mainly spent my time working on the smaller thing such as the player artwork and a timer system![player sprite](https://github.com/JAX3/Runner-game-Iteration1/blob/master/player.png)
+For week 2 i mainly spent my time working on the smaller thing such as the player artwork and a timer system![player sprite](https://github.com/JAX3/Runner-game-Iteration1/blob/master/player.png) 
+```js
+var text;
+var timedEvent;
+//timer
+ text = this.add.text(32, 32);
+ timedEvent = this.time.addEvent({ delay: 10000,  callback: counter,  repeat: 10, startAt: 8000 });
+  text.setText('Time: ' + timedEvent.repeatCount(+1).toString().substr(0, 4));
+  function counter(event) {
+    //text.setText('Event.progress: ' + timedEvent.getProgress().toString().substr(0, 4);
+    console.log('Event.progress: ' + (timedEvent.repeatCount));
+}
+```
+this was my basic way of timing the game  however the phaser 3 ``timedEvent`` function has a property called ``elapsed`` which printsout the number of seconds that has passed.
