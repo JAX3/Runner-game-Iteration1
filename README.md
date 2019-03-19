@@ -5,5 +5,21 @@ For the first week  i mainly spent researching how to make a basic auto runner w
 parts from [emoji-run](https://github.com/JAX3/emoji-run) to get a basic understanding on how to make an endless runner.
 
 
-The main part of the week was also spent learning how to make the platform spawn before the player reaches them as I had some issue of the player moving to fast for the platforms to be generated though once this issue was fixed i had one major issue of the platform still existing within the world  and was causing some performance issues after 30seconds. 
+The main part of the week was also spent learning how to make the platform spawn before the player reaches them as I had some issue of the player moving to fast for the platforms to be generated though once this issue was fixed i had one major issue of the platform still existing within the world  and was causing some performance issues after 30seconds. I fixed this by writing a small method to reuse the platforms once they we're outof view of the player and camera.
 
+```javascript
+// reusing platforms out of view.
+        let minDistance = game.config.width;
+        this.platformGroup.getChildren().forEach(function (platform) {
+            let platformDistance = game.config.width - platform.x - platform.displayWidth / 2;
+            minDistance = Math.min(minDistance, platformDistance);
+            if (platform.x < - platform.displayWidth / 2) {
+                this.platformGroup.killAndHide(platform);
+                this.platformGroup.remove(platform);
+            }
+}, this);
+
+````
+this allowed me to reused the platforms once they go outside the camera view. For the rest of the week was mainly spent working the player controls interms of player speed,jumping and gravity.
+```javascript
+```
