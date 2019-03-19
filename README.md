@@ -22,4 +22,26 @@ The main part of the week was also spent learning how to make the platform spawn
 ````
 this allowed me to reused the platforms once they go outside the camera view. For the rest of the week was mainly spent working the player controls interms of player speed,jumping and gravity.
 ```javascript
+ // global game options
+let gameOptions = {
+    platformStartSpeed: 325,
+    spawnRange: [100, 350],
+    platformSizeRange: [75, 250],
+    playerGravity: 900,
+    jumpForce: 400,
+    playerStartPosition: 200,
+    jumps: 3
+}
+```
+having a global  game options allowed me to change certian option on the fly without editing each method such as the jumps being capped at ``3``.
+```javascript
+mp() {
+        if (this.player.body.touching.down || (this.playerJumps > 0 && this.playerJumps < gameOptions.jumps)) {
+            if (this.player.body.touching.down) {
+                this.playerJumps = 0;
+            }
+            this.player.setVelocityY(gameOptions.jumpForce * -1);
+            this.playerJumps++;
+        }
+}
 ```
