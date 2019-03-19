@@ -35,7 +35,7 @@ let gameOptions = {
 ```
 having a global  game options allowed me to change certian option on the fly without editing each method such as the jumps being capped at ``3``.
 ```javascript
-mp() {
+jump() {
         if (this.player.body.touching.down || (this.playerJumps > 0 && this.playerJumps < gameOptions.jumps)) {
             if (this.player.body.touching.down) {
                 this.playerJumps = 0;
