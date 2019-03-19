@@ -45,3 +45,5 @@ jump() {
         }
 }
 ```
+## Week 2
+For week 2 i mainly spent my time working on the smaller thing such as the player artwork and a timer system
