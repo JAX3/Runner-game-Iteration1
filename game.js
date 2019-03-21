@@ -96,7 +96,7 @@ class playGame extends Phaser.Scene {
         this.playerJumps = 1;
 
         // adding a platform to the game, the arguments are platform width and x position
-        this.addPlatform(game.config.width, game.config.width / 2);
+        this.addPlatform(game.config.width, game.config.width / 2,game.config.height. game.config.height/2);
 
         // adding the player;
         this.player = this.physics.add.sprite(gameOptions.playerStartPosition, game.config.height / 2, "player");
@@ -118,17 +118,18 @@ class playGame extends Phaser.Scene {
     }
 
     // generating the platforms from the sprite location
-    addPlatform(platformWidth, posX) {
+    addPlatform(platformWidth, posX,PosY) {
         let platform;
         if (this.platformPool.getLength()) {
             platform = this.platformPool.getFirst();
             platform.x = posX;
+			platform.y = posY;
             platform.active = true;
             platform.visible = true;
             this.platformPool.remove(platform);
         }
         else {
-            platform = this.physics.add.sprite(posX, game.config.height * 0.8, "platform");
+            platform = this.physics.add.sprite(posX,posY, game.config.height * 0.8, "platform");
             platform.setImmovable(true);
             platform.setVelocityX(gameOptions.platformStartSpeed * -1);
             this.platformGroup.add(platform);
